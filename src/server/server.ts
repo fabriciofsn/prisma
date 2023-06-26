@@ -1,4 +1,5 @@
 import Express, { Router } from "express";
+import { router } from "../routers";
 export class App {
   public server: Express.Application;
 
@@ -13,6 +14,6 @@ export class App {
   }
 
   private routes() {
-    this.server.use(Router());
+    this.server.use(router);
   }
 }
