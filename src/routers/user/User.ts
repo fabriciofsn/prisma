@@ -15,7 +15,6 @@ class User {
         },
       })
       .then(() => res.redirect("/"));
-    console.log(newUser);
   }
 }
 
