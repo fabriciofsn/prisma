@@ -1,16 +1,18 @@
-import Express from "express";
-
-export class Server {
-  private app: Express.Application;
-
-  private server() {
-    this.app = Express();
-    this.app.listen(3030, () => {
-      console.log("Server started");
-    });
-  }
+import Express, { Router } from "express";
+export class App {
+  public server: Express.Application;
 
   constructor() {
-    this.server();
+    this.server = Express();
+    this.middleWare();
+    this.routes();
+  }
+
+  private middleWare() {
+    this.server.use(Express.json());
+  }
+
+  private routes() {
+    this.server.use(Router());
   }
 }

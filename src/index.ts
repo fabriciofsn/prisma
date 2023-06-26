@@ -1,3 +1,5 @@
-import { Server } from "./server/server";
+import { App } from "./server/server";
 
-const server = new Server();
+new App().server.listen(3030, () => {
+  console.log("Server started!");
+});
