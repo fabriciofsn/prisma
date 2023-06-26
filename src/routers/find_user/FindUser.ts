@@ -5,15 +5,20 @@ const prisma = new PrismaClient();
 
 class FindUser {
   public async user(req: Request, res: Response) {
-    const users = await prisma.user.findMany();
-    users.map((user) => {
-      return res.json({
-        id: user.id,
-        nome: user.name,
-        email: user.email,
-        CPF: user.CPF,
+    try {
+      const users = await prisma.user.findMany();
+      let usersList = users.map((user) => {
+        return {
+          id: user.id,
+          nome: user.name,
+          email: user.email,
+          CPF: user.CPF,
+        };
       });
-    });
+      res.json(usersList);
+    } catch (error) {
+      if (error) console.log(`Ocorreu um erro ${error}`);
+    }
   }
 }
 
