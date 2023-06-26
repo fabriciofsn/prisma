@@ -6,6 +6,14 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = "postgresql://postgres:xtm440@localhost:5432/prisma"
 }
+
+model User{
+  id Int @id @default(autoincrement())
+  email String @unique
+  name String
+  CPF String
+}
+
