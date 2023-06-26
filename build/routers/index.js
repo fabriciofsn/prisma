@@ -3,6 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.router = void 0;
 const express_1 = require("express");
 const Home_1 = require("./home/Home");
+const User_1 = require("./user/User");
 const router = (0, express_1.Router)();
 exports.router = router;
 router.get("/", Home_1.homePage.home);
+router.post("/cadastrar/:name/:email/:CPF", User_1.user.getData);
