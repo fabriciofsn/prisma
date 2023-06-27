@@ -11,6 +11,6 @@ const router = (0, express_1.Router)();
 exports.router = router;
 router.get("/", Home_1.homePage.home);
 router.post("/cadastrar/:name/:email/:CPF", User_1.user.getData);
-router.get("/usuarios", FindUser_1.findUser.user);
+router.get("/users", FindUser_1.findUser.user);
 router.get("/user/:email", FindByEmail_1.findByEmail.users);
 router.get("/users/:name", FindByName_1.findByName.usersName);

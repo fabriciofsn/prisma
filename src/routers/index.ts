@@ -9,7 +9,7 @@ const router: Router = Router();
 
 router.get("/", homePage.home);
 router.post("/cadastrar/:name/:email/:CPF", user.getData);
-router.get("/usuarios", findUser.user);
+router.get("/users", findUser.user);
 router.get("/user/:email", findByEmail.users);
 router.get("/users/:name", findByName.usersName);
 
