@@ -1,4 +1,4 @@
-# Projeto com Prisma ORM
+# Aplicação com Prisma ORM
 Este repositório contém uma aplicação construída com Prisma, um ORM (Object-Relational Mapping) moderno para bancos de dados. O Prisma oferece uma maneira fácil e intuitiva de interagir com o banco de dados, facilitando a criação, leitura, atualização e exclusão de registros.
 
 ## Requisitos
