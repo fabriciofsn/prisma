@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { homePage } from "./home/Home";
-import { user } from "./user/User";
-import { findUser } from "./find_user/FindUser";
-import { findByEmail } from "./find_by_email/FindByEmail";
-import { findByName } from "./find_by_name/FindByName";
+import { user } from "./usuario/user/User";
+import { findUser } from "./usuario/find_user/FindUser";
+import { findByEmail } from "./usuario/find_by_email/FindByEmail";
+import { findByName } from "./usuario/find_by_name/FindByName";
 
 const router: Router = Router();
 
