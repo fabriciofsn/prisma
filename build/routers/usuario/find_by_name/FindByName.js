@@ -5,7 +5,7 @@ const client_1 = require("@prisma/client");
 const prisma = new client_1.PrismaClient();
 class FindByName {
     async usersName(req, res) {
-        let { name } = req.params;
+        let { name } = req.body;
         try {
             const names = await prisma.user.findMany({
                 where: {

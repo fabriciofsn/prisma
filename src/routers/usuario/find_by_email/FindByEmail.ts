@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 class FindByEmail {
   public async users(req: Request, res: Response) {
-    const { email } = req.params;
+    const { email } = req.body;
     try {
       const users = await prisma.user.findUnique({
         where: {

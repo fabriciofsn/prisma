@@ -3,6 +3,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["views"]
 }
 
 datasource db {
@@ -12,10 +13,10 @@ datasource db {
 
 model Produto{
   id Int @id @default(autoincrement())
-  nome String 
-  preco Float
-  descricao String
-  quantidade Int 
+  nome String @db.VarChar(45)
+  preco Float @db.Real
+  descricao String @db.Text
+  quantidade Int @db.Integer
 }
 model User{
   id Int @id @default(autoincrement())
@@ -23,4 +24,3 @@ model User{
   name String
   CPF String
 }
-

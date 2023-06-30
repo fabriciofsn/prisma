@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 class FindByName {
   public async usersName(req: Request, res: Response) {
-    let { name } = req.params;
+    let { name } = req.body;
     try {
       const names = await prisma.user.findMany({
         where: {

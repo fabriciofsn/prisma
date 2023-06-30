@@ -1,5 +1,6 @@
-import Express, { Router } from "express";
+import Express from "express";
 import { router } from "../routers";
+import bodyParser from "body-parser";
 export class App {
   public server: Express.Application;
 
@@ -11,6 +12,8 @@ export class App {
 
   private middleWare() {
     this.server.use(Express.json());
+    this.server.use(bodyParser.json());
+    this.server.use(bodyParser.urlencoded({ extended: true }));
   }
 
   private routes() {

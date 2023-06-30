@@ -5,19 +5,20 @@ const prisma = new PrismaClient();
 
 class User {
   public async getData(req: Request, res: Response) {
-    let { name, email, CPF } = req.params;
+    let { name, email, CPF } = req.body;
+
     try {
-      const newUser = await prisma.user.create({
+      await prisma.user.create({
         data: {
-          name: name,
-          email: email,
-          CPF: CPF,
+          name,
+          email,
+          CPF,
         },
       });
     } catch (e) {
       if (e) console.log("Ocorreu um erro " + e);
     } finally {
-      res.redirect("/");
+      res.redirect("/users");
     }
   }
 }
