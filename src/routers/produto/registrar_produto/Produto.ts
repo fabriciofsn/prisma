@@ -10,13 +10,13 @@ class Produto {
     try {
       await prisma.produto.create({
         data: {
-          nome,
+          nome: nome.toLowerCase(),
           preco: Number(preco),
           descricao,
           quantidade: Number(quantidade),
         },
       });
-      res.redirect("/");
+      res.redirect("/produtos");
     } catch (error) {
       if (error) console.log(`Ocorreu um erro ${error}`);
     }
