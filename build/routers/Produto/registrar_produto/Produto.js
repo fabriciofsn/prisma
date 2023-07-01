@@ -9,9 +9,9 @@ class Produto {
         try {
             await prisma.produto.create({
                 data: {
-                    nome: nome,
+                    nome,
                     preco: Number(preco),
-                    descricao: descricao,
+                    descricao,
                     quantidade: Number(quantidade),
                 },
             });

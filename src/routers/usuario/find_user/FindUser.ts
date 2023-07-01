@@ -12,6 +12,7 @@ class FindUser {
           id: user.id,
           nome: user.name,
           email: user.email,
+          senha: user.senha,
           CPF: user.CPF,
         };
       });

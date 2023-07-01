@@ -9,7 +9,7 @@ class User {
         try {
             await prisma.user.create({
                 data: {
-                    name,
+                    name: name,
                     email,
                     CPF,
                 },
