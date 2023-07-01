@@ -12,7 +12,7 @@ class Produto {
         data: {
           nome: nome.toLowerCase(),
           preco: Number(preco),
-          descricao,
+          descricao: descricao.toLowerCase(),
           quantidade: Number(quantidade),
         },
       });

@@ -10,7 +10,7 @@ class FindByName {
     let search = await prisma.produto.findMany({
       where: {
         nome: {
-          startsWith: nome,
+          startsWith: nome.toLowerCase(),
         },
       },
     });
