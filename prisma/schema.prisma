@@ -22,3 +22,5 @@ model Produto {
   descricao  String
   quantidade Int
 }
+
+

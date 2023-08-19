@@ -18,7 +18,7 @@ class FindUser {
       });
       res.json(usersList);
     } catch (error) {
-      if (error) console.log(`Ocorreu um erro ${error}`);
+      console.log(`Ocorreu um erro ${error}`);
     }
   }
 }
